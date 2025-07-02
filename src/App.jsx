@@ -69,7 +69,7 @@ function App() {
           if (data.length > 0) {
             setNews(data);
             setSelectedDate(date);
-            setSelectedSources([]); // Clear filters on initial load
+            setSelectedSources([]);
             break;
           }
         } catch (error) {
@@ -84,7 +84,7 @@ function App() {
   const fetchNews = async (dateStr) => {
     setLoading(true);
     setCurrentPage(1);
-    setSelectedSources([]); // Clear filters when a new date is selected
+    setSelectedSources([]);
     try {
       const res = await fetch(`${BACKEND}/news-by-date?date=${dateStr}`);
       const data = await res.json();
