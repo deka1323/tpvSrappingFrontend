@@ -11,8 +11,9 @@ import ScrapingStatusBanner from './components/ScrapingStatusBanner';
 import SourceFilter from './components/SourceFilter';
 import { CheckCircle, AlertCircle, Newspaper } from 'lucide-react';
 
-const BACKEND = 'http://localhost:5000';
-const AUTH_TOKEN = 'your_secret_token';
+// const BACKEND = 'http://localhost:5000';
+const BACKEND = os.getenv("BACKEND")
+const AUTH_TOKEN = os.getenv("AUTH_TOKEN", "your_secret_token")
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
