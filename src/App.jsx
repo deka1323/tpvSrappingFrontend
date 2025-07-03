@@ -12,8 +12,8 @@ import SourceFilter from './components/SourceFilter';
 import { CheckCircle, AlertCircle, Newspaper } from 'lucide-react';
 
 // const BACKEND = 'http://localhost:5000';
-const BACKEND = process.env.REACT_APP_BACKEND
-const AUTH_TOKEN = process.env.REACT_APP_AUTH_TOKEN
+const BACKEND = import.meta.env.VITE_BACKEND
+const AUTH_TOKEN = import.meta.env.VITE_AUTH_TOKEN
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(null);
